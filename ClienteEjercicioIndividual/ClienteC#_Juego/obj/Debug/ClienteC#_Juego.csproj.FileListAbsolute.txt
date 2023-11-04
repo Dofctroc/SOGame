@@ -42,3 +42,14 @@ C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Teoria y Ejercicios\Ejercicios Indivi
 C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Teoria y Ejercicios\Ejercicios Individuales\L3\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.csproj.CoreCompileInputs.cache
 C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Teoria y Ejercicios\Ejercicios Individuales\L3\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.exe
 C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Teoria y Ejercicios\Ejercicios Individuales\L3\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.pdb
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\bin\Debug\ClienteC#_Juego.exe.config
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\bin\Debug\ClienteC#_Juego.exe
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\bin\Debug\ClienteC#_Juego.pdb
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.csproj.AssemblyReference.cache
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.csproj.SuggestedBindingRedirects.cache
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC__Juego.Form1.resources
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC__Juego.Properties.Resources.resources
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.csproj.GenerateResource.cache
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.csproj.CoreCompileInputs.cache
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.exe
+C:\Users\G513\Desktop\Asier Uni\3r Año\SO\Ejercicios Individuales\L4\ClienteEjercicioIndividual\ClienteC#_Juego\obj\Debug\ClienteC#_Juego.pdb

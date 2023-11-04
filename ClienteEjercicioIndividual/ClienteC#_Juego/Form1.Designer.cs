@@ -39,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button_Conectar = new System.Windows.Forms.Button();
             this.button_Desconectar = new System.Windows.Forms.Button();
-            this.button_cuantosServicios = new System.Windows.Forms.Button();
             this.label_cuantosServicios = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -166,21 +165,12 @@
             this.button_Desconectar.UseVisualStyleBackColor = true;
             this.button_Desconectar.Click += new System.EventHandler(this.button_Desconectar_Click);
             // 
-            // button_cuantosServicios
-            // 
-            this.button_cuantosServicios.Location = new System.Drawing.Point(237, 241);
-            this.button_cuantosServicios.Name = "button_cuantosServicios";
-            this.button_cuantosServicios.Size = new System.Drawing.Size(116, 42);
-            this.button_cuantosServicios.TabIndex = 3;
-            this.button_cuantosServicios.Text = "¿Cuántos servicios?";
-            this.button_cuantosServicios.UseVisualStyleBackColor = true;
-            this.button_cuantosServicios.Click += new System.EventHandler(this.button_cuantosServicios_Click);
-            // 
             // label_cuantosServicios
             // 
-            this.label_cuantosServicios.Location = new System.Drawing.Point(237, 286);
+            this.label_cuantosServicios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_cuantosServicios.Location = new System.Drawing.Point(179, 296);
             this.label_cuantosServicios.Name = "label_cuantosServicios";
-            this.label_cuantosServicios.Size = new System.Drawing.Size(232, 65);
+            this.label_cuantosServicios.Size = new System.Drawing.Size(174, 55);
             this.label_cuantosServicios.TabIndex = 4;
             this.label_cuantosServicios.Text = "Numer servicios:";
             // 
@@ -188,9 +178,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 363);
+            this.ClientSize = new System.Drawing.Size(365, 363);
             this.Controls.Add(this.label_cuantosServicios);
-            this.Controls.Add(this.button_cuantosServicios);
             this.Controls.Add(this.button_Desconectar);
             this.Controls.Add(this.button_Conectar);
             this.Controls.Add(this.groupBox1);
@@ -217,7 +206,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_Conectar;
         private System.Windows.Forms.Button button_Desconectar;
-        private System.Windows.Forms.Button button_cuantosServicios;
         private System.Windows.Forms.Label label_cuantosServicios;
     }
 }

@@ -16,14 +16,47 @@ namespace ClienteC__Juego
     public partial class Form1 : Form
     {
         Socket server;
+        Thread atender;
         public Form1()
         {
             InitializeComponent();
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void AtenderServidor()
+        {
+            while (true)
+            {
+                //Recibimos el mensaje del servidor
+                byte[] msg2 = new byte[80];
+                server.Receive(msg2);
+                string[] mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0].Split('/');
+                int codigo = Convert.ToInt32(mensaje[0]);
+
+                switch (codigo)
+                {
+                    case 1:
+                        MessageBox.Show("La longitud de tu nombre es: " + mensaje[1]);
+                        break;
+                    case 2:
+                        if (mensaje[1] == "SI")
+                            MessageBox.Show("Tu nombre ES bonito.");
+                        else
+                            MessageBox.Show("Tu nombre NO es bonito. Lo siento.");
+                        break;
+                    case 3:
+                        MessageBox.Show(mensaje[1]);
+                        break;
+                    case 4:
+                        label_cuantosServicios.Text = "Numero servicios: \n" + mensaje[1];
+                        break;
+                }
+            }
         }
 
         private void button_Conectar_Click(object sender, EventArgs e)
@@ -49,6 +82,10 @@ namespace ClienteC__Juego
                 MessageBox.Show("No he podido conectar con el servidor");
                 return;
             }
+
+            ThreadStart ts = delegate { AtenderServidor(); };
+            atender = new Thread(ts);
+            atender.Start();
         }
 
         private void button_Desconectar_Click(object sender, EventArgs e)
@@ -63,6 +100,7 @@ namespace ClienteC__Juego
             this.BackColor = Color.Gray;
             server.Shutdown(SocketShutdown.Both);
             server.Close();
+            atender.Abort();
         }
 
         private void button_enviar_Click(object sender, EventArgs e)
@@ -73,12 +111,6 @@ namespace ClienteC__Juego
                 // Enviamos al servidor el nombre tecleado
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
-
-                //Recibimos la respuesta del servidor
-                byte[] msg2 = new byte[80];
-                server.Receive(msg2);
-                mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
-                MessageBox.Show("La longitud de tu nombre es: " + mensaje);
             }
             else if (command_bonito.Checked)
             {
@@ -86,15 +118,6 @@ namespace ClienteC__Juego
                 // Enviamos al servidor el nombre tecleado
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
-
-                byte[] msg2 = new byte[80];
-                server.Receive(msg2);
-                mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
-
-                if (mensaje == "SI")
-                    MessageBox.Show("Tu nombre ES bonito.");
-                else
-                    MessageBox.Show("Tu nombre NO es bonito. Lo siento.");
             }
             else
             {
@@ -103,27 +126,7 @@ namespace ClienteC__Juego
                 // Enviamos al servidor el nombre tecleado
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
-
-                byte[] msg2 = new byte[80];
-                server.Receive(msg2);
-                mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
-
-                MessageBox.Show(mensaje);
             }
-        }
-
-        private void button_cuantosServicios_Click(object sender, EventArgs e)
-        {
-            string mensaje = "4/";
-            // Enviamos al servidor el nombre tecleado
-            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-            server.Send(msg);
-
-            //Recibimos la respuesta del servidor
-            byte[] msg2 = new byte[80];
-            server.Receive(msg2);
-            mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
-            label_cuantosServicios.Text = "Numero servicios: \n" + mensaje;
         }
     }
 }
